@@ -1,550 +1,574 @@
 <!DOCTYPE html>
-
-<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error-container": "#93000a", "inverse-on-surface": "#eef0ff", "surface-container": "#eaedff", "secondary-container": "#4069f2", "primary": "#004ac6", "on-surface": "#131b2e", "primary-fixed": "#dbe1ff", "on-primary": "#ffffff", "secondary-fixed": "#dce1ff", "surface-variant": "#dae2fd", "tertiary-fixed-dim": "#adc6ff", "primary-fixed-dim": "#b4c5ff", "surface-tint": "#0053db", "on-primary-container": "#eeefff", "secondary-fixed-dim": "#b7c4ff", "on-secondary-fixed": "#001551", "tertiary-fixed": "#d8e2ff", "surface-dim": "#d2d9f4", "outline-variant": "#c3c6d7", "inverse-surface": "#283044", "background": "#faf8ff", "on-tertiary-container": "#edf0ff", "error": "#ba1a1a", "on-tertiary": "#ffffff", "surface-container-high": "#e2e7ff", "secondary": "#1d4ed8", "on-surface-variant": "#434655", "on-error": "#ffffff", "on-background": "#131b2e", "tertiary": "#0051b1", "on-secondary-container": "#fffbff", "surface-container-low": "#f2f3ff", "on-tertiary-fixed-variant": "#004395", "surface-container-lowest": "#ffffff", "inverse-primary": "#b4c5ff", "surface-container-highest": "#dae2fd", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#0039b5", "outline": "#737686", "on-primary-fixed-variant": "#003ea8", "on-tertiary-fixed": "#001a42", "on-secondary": "#ffffff", "on-primary-fixed": "#00174b", "tertiary-container": "#0f69dc", "surface": "#faf8ff", "surface-bright": "#faf8ff", "primary-container": "#2563eb" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "margin-tablet": "2rem", "gutter-mobile": "1rem", "gutter-desktop": "1.5rem", "space-lg": "1.5rem", "space-sm": "0.75rem", "space-xs": "0.5rem", "space-2xl": "3rem", "space-2xs": "0.25rem", "space-md": "1rem", "margin-desktop": "3rem", "margin-mobile": "1rem", "space-xl": "2rem", "space-3xl": "4rem" }, fontFamily: { "label-sm": ["Inter"], "headline-md": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "label-md": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "display-lg-mobile": ["Space Grotesk"], "body-sm": ["Inter"], "headline-lg": ["Space Grotesk"], "display-lg": ["Space Grotesk"] }, fontSize: { "label-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-lg": ["3.5rem", { "lineHeight": "4rem", "letterSpacing": "-0.03em", "fontWeight": "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error-container": "#93000a", "inverse-on-surface": "#eef0ff", "surface-container": "#eaedff", "secondary-container": "#4069f2", "primary": "#004ac6", "on-surface": "#131b2e", "primary-fixed": "#dbe1ff", "on-primary": "#ffffff", "secondary-fixed": "#dce1ff", "surface-variant": "#dae2fd", "tertiary-fixed-dim": "#adc6ff", "primary-fixed-dim": "#b4c5ff", "surface-tint": "#0053db", "on-primary-container": "#eeefff", "secondary-fixed-dim": "#b7c4ff", "on-secondary-fixed": "#001551", "tertiary-fixed": "#d8e2ff", "surface-dim": "#d2d9f4", "outline-variant": "#c3c6d7", "inverse-surface": "#283044", "background": "#faf8ff", "on-tertiary-container": "#edf0ff", "error": "#ba1a1a", "on-tertiary": "#ffffff", "surface-container-high": "#e2e7ff", "secondary": "#1d4ed8", "on-surface-variant": "#434655", "on-error": "#ffffff", "on-background": "#131b2e", "tertiary": "#0051b1", "on-secondary-container": "#fffbff", "surface-container-low": "#f2f3ff", "on-tertiary-fixed-variant": "#004395", "surface-container-lowest": "#ffffff", "inverse-primary": "#b4c5ff", "surface-container-highest": "#dae2fd", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#0039b5", "outline": "#737686", "on-primary-fixed-variant": "#003ea8", "on-tertiary-fixed": "#001a42", "on-secondary": "#ffffff", "on-primary-fixed": "#00174b", "tertiary-container": "#0f69dc", "surface": "#faf8ff", "surface-bright": "#faf8ff", "primary-container": "#2563eb" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "margin-tablet": "2rem", "gutter-mobile": "1rem", "gutter-desktop": "1.5rem", "space-lg": "1.5rem", "space-sm": "0.75rem", "space-xs": "0.5rem", "space-2xl": "3rem", "space-2xs": "0.25rem", "space-md": "1rem", "margin-desktop": "3rem", "margin-mobile": "1rem", "space-xl": "2rem", "space-3xl": "4rem" }, fontFamily: { "label-sm": ["Inter"], "headline-md": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "label-md": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "display-lg-mobile": ["Space Grotesk"], "body-sm": ["Inter"], "headline-lg": ["Space Grotesk"], "display-lg": ["Space Grotesk"] }, fontSize: { "label-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-lg": ["3.5rem", { "lineHeight": "4rem", "letterSpacing": "-0.03em", "fontWeight": "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
     body {
       min-height: max(884px, 100dvh);
     }
+    .toast-notification {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
   </style>
-  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col antialiased"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Logo_Kratouna.jpg" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W53ZKb8p3khjER7ycf8cA3sx1nLWFeN0V0IBZfggoZM6mIkm1KNTODnT7AD83Oi30Oxog_rkJY8v7_NNhivkma4xZiLgfwDWBQft-uK0KDEpZkuupvYLTtv3lLaEqyZnKxblPHmcPwFbRw0kzu3gjjk5WC5uBRPRyarN8itx3S9sx4R5mhuDVU5D7b9xH8SLx17-lQ7-i6HQ2hV5QYWiOyTrY3XwjUCFNKQQb16bjyPmS2ToloRXShFT3w0RtN-ovPfXSUr64lgfc"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Kratouna</span><span class="hidden">Accueil</span></div><div class="flex items-center gap-space-xs"><button id="notificationBtn" class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-primary transition-colors active:scale-95 relative"><span class="material-symbols-outlined text-[24px]">notifications</span><span id="notifBadge" class="absolute top-1.5 right-1.5 min-w-[16px] h-4 px-1 bg-error text-on-error text-[10px] font-bold rounded-full flex items-center justify-center hidden">3</span></button><a class="w-11 h-11 flex items-center justify-center rounded-xl" data-path="profil" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida/AEtjO1XXtXQbqFT2MfKObParFmFQan75n_2kiokX_FmUzsWfz8vMkqtQMuR-avcgwTviszwem5pOM6qTTjI4bJoyvaVU779DFYaEKJ2ReBo7sQHPUoPvr15wi6F2BYcEZ5ho7mz9WAYY4f-bpHz46Yxe2-FBK8HOsQMeFdKximHI9L9MP3_gM798alIT3kfHSHmh80e-JAy8liS6FncQ0fV0xoX16TO96wiuM_ovdbse55aIkd48PS7vIqu6iKWp"/></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
-<!-- Greeting Header -->
-<div class="px-gutter-mobile pt-space-md pb-space-sm flex flex-col gap-space-2xs">
-<div class="flex items-center justify-between">
-<div>
-<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight flex items-center gap-1.5">
-          Bonjour Fatou <span class="inline-block origin-bottom-right hover:rotate-12 transition-transform duration-300">👋</span>
-</h1>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Continuez votre apprentissage aujourd'hui</p>
-</div>
-<div class="flex items-center gap-space-2xs px-space-xs py-1 bg-surface-container rounded-full shadow-sm">
-<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
-<span class="font-label-sm text-label-sm text-primary font-bold">5 jours</span>
-</div>
-</div>
-</div>
-<!-- Search & Filter Bar -->
-<div class="px-gutter-mobile my-space-xs">
-<div class="flex items-center gap-space-xs">
-<div class="flex-1 flex items-center bg-surface-container-lowest rounded-xl px-space-sm h-12 shadow-sm focus-within:shadow-md transition-shadow">
-<span class="material-symbols-outlined text-[20px] text-on-surface-variant mr-space-2xs">search</span>
-<input id="searchInput" class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline outline-none" placeholder="Rechercher un cours, compétence, formateur..." type="text"/>
-</div>
-<button id="filterBtn" class="w-12 h-12 flex items-center justify-center bg-primary-container text-on-primary rounded-xl shadow-sm active:scale-95 transition-all">
-<span class="material-symbols-outlined text-[22px]">tune</span>
-</button>
-</div>
-</div>
-<!-- Hero Highlight Banner -->
-<div class="px-gutter-mobile my-space-sm">
-<div class="relative overflow-hidden bg-gradient-to-br from-primary-container via-secondary to-primary rounded-2xl p-space-md text-on-primary shadow-md">
-<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-surface-container-lowest/10 rounded-full blur-2xl pointer-events-none"></div>
-<div class="relative z-10 flex flex-col gap-space-xs">
-<div class="inline-flex items-center gap-space-2xs bg-surface-container-lowest/20 backdrop-blur-md px-space-xs py-1 rounded-full w-fit">
-<span class="material-symbols-outlined text-[14px] text-on-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
-<span class="font-label-sm text-label-sm text-on-primary">50+ formations certifiantes</span>
-</div>
-<div>
-<h2 class="font-headline-md text-headline-md text-on-primary tracking-tight leading-tight">
-            Apprendre. Évoluer. Réussir.
-          </h2>
-<p class="font-body-sm text-body-sm text-on-primary/90 mt-1">
-            Formez-vous avec des experts du Sahel et boostez votre carrière tech.
-          </p>
-</div>
-<div class="pt-space-2xs flex items-center gap-space-sm">
-<button id="exploreBtn" class="px-space-md py-2.5 bg-surface-container-lowest text-primary font-label-md text-label-md rounded-xl shadow-sm active:scale-95 transition-transform">
-            Explorer les cours
-          </button>
-<div class="flex items-center gap-1 text-on-primary/90 font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[16px]">cloud_download</span>
-<span>Hors-ligne dispo</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Category Pills (Horizontal Scroll) -->
-<div class="my-space-xs">
-<div class="flex items-center gap-space-2xs px-gutter-mobile overflow-x-auto no-scrollbar py-1" id="categoryContainer">
-<button class="category-btn active px-space-sm py-2 rounded-full font-label-md text-label-md bg-primary text-on-primary shadow-sm shrink-0 transition-colors" data-category="all">
-        Tout
-      </button>
-<button class="category-btn px-space-sm py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:text-primary shadow-sm shrink-0 transition-colors" data-category="web">
-        Dév Web
-      </button>
-<button class="category-btn px-space-sm py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:text-primary shadow-sm shrink-0 transition-colors" data-category="mobile-money">
-        Mobile Money
-      </button>
-<button class="category-btn px-space-sm py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:text-primary shadow-sm shrink-0 transition-colors" data-category="data">
-        Data
-      </button>
-<button class="category-btn px-space-sm py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:text-primary shadow-sm shrink-0 transition-colors" data-category="entrepreneuriat">
-        Entrepreneuriat
-      </button>
-<button class="category-btn px-space-sm py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:text-primary shadow-sm shrink-0 transition-colors" data-category="design">
-        Design UI
-      </button>
-</div>
-</div>
-<!-- En cours de visionnage (Resume Course) -->
-<div class="px-gutter-mobile my-space-sm">
-<div class="flex items-center justify-between mb-space-2xs">
-<h2 class="font-headline-sm text-headline-sm text-on-surface">En cours de visionnage</h2>
-<span class="font-label-sm text-label-sm text-primary font-medium">1 actif</span>
-</div>
-<div id="resumeCourseCard" class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
-<div class="flex items-start gap-space-sm">
-<div class="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-surface-container">
-<img class="w-full h-full object-cover" data-alt="Close up of a modern laptop screen showing Next.js code editor with vibrant syntax highlighting and a subtle blue UI ambient glow, cinematic soft focus background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNEeTqcwSREAqhuDdZegy_jXBl-bKw2vJMgnoMkQy_u8JoRYPehCJzgauST-QG-bd3EnUTEguuxP2R6ME-Wbq48CSS-8eUwXOvDGwHdQGkQpjh-W1qMGKIvM0F1U0XMleJArqKNZcfDwWA4t1Msuw40ISIfXZQGv4gkGtNAr-gh-rsxsj_Dp2yEbSEb05vxO-3DUzy0IPXQsn8n8Ta9Bp6Xq1SVDru9jzxF-wf-NJA-wGvmj8xMF75tw"/>
-</div>
-<div class="flex-1 min-w-0">
-<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Développement Web</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface truncate mt-0.5">Architecture Full-Stack Sahel &amp; Next.js</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">Module 3.1: Intégration CinetPay &amp; Airtel/Moov</p>
-</div>
-</div>
-<!-- Linear Progress Bar -->
-<div class="flex flex-col gap-1.5">
-<div class="flex items-center justify-between font-label-sm text-label-sm">
-<span class="text-on-surface-variant">Progression globale</span>
-<span id="progressPercent" class="text-primary font-bold">68%</span>
-</div>
-<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
-<div id="progressBar" class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 68%;"></div>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-2xs">
-<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
-<span id="timeRemaining">18 min restantes</span>
-</div>
-<button id="resumeBtn" class="px-space-md py-2 bg-primary text-on-primary font-label-md text-label-md rounded-xl flex items-center gap-1.5 shadow-sm active:scale-95 transition-all">
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-<span>Reprendre</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Formations recommandées pour vous -->
-<div class="px-gutter-mobile my-space-sm flex flex-col gap-space-sm">
-<div class="flex items-center justify-between">
-<h2 class="font-headline-sm text-headline-sm text-on-surface">Formations recommandées</h2>
-<a id="viewAllLink" class="font-label-md text-label-md text-primary font-medium hover:underline cursor-pointer" href="#">Voir tout</a>
-</div>
-<!-- Course Card 1 -->
-<div class="course-card bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow" data-category="web">
-<div class="relative w-full h-36 rounded-xl overflow-hidden bg-surface-container">
-<img class="w-full h-full object-cover" data-alt="African software engineering team working on modern code architecture in a bright, minimalist tech hub with laptops and blueprints on a wooden desk, warm daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVhgl_FS3hcY9SDtA460omOFe3lM9SM79T5l6dnKXCO1_170Ovdk4Q9NsYdj6VMK1fDOCd1_eeWp5TlCmqxRGMznO1bQiB5XGkEblE825sq9HDuoYnVEnInSmfDWu0Es-uiKqkiu082porpe7o4yxH9jh12-jEe6AHnSz52zu0Kww8QaxzBO0zvV4b2UbBdWkopv7FtuRpk-fCG7EtMNjDdfeS-MZ6vjSPhmkhPfvK6y7mVSGQPKaUjA"/>
-<div class="absolute top-2 left-2 flex gap-1.5">
-<span class="px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm rounded-full shadow-sm font-semibold">
-            Certifiante
-          </span>
-<span class="px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm rounded-full shadow-sm flex items-center gap-1">
-<span class="material-symbols-outlined text-[12px]">download_for_offline</span>
-            Hors-ligne
-          </span>
-</div>
-<button class="bookmark-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center text-on-surface-variant shadow-sm active:scale-90 transition-transform" data-title="Développement Web Full-Stack & Supabase">
-<span class="material-symbols-outlined text-[18px]">bookmark</span>
-</button>
-</div>
-<div class="flex flex-col gap-1 px-1">
-<div class="flex items-center gap-2">
-<div class="flex items-center gap-0.5 text-primary font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="font-bold">4.9</span>
-<span class="text-on-surface-variant font-normal">(140 avis)</span>
-</div>
-<span class="text-outline text-[12px]">•</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">24 heures</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 mt-0.5">
-          Développement Web Full-Stack &amp; Supabase
-        </h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
-          Créez des applications performantes adaptées à la connectivité africaine avec Next.js et bases de données temps réel.
-        </p>
-<div class="flex items-center justify-between pt-space-xs mt-1">
-<div>
-<span class="font-label-sm text-label-sm text-on-surface-variant block">Prix de lancement</span>
-<span class="font-headline-sm text-headline-sm text-primary font-bold">25 000 FCFA</span>
-</div>
-<button class="details-btn px-space-md py-2 bg-surface-container text-primary font-label-md text-label-md rounded-xl hover:bg-primary hover:text-on-primary transition-colors active:scale-95" data-title="Développement Web Full-Stack & Supabase">
-            Détails
-          </button>
-</div>
-</div>
-</div>
-<!-- Course Card 2 -->
-<div class="course-card bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow" data-category="mobile-money">
-<div class="relative w-full h-36 rounded-xl overflow-hidden bg-surface-container">
-<img class="w-full h-full object-cover" data-alt="Digital payment terminal and smartphone displaying mobile money transaction confirmation with clean abstract graphs, high tech financial vibe with deep blue and gold accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADV5-vWar_uoAn6HqSBGkqNHMDXRwyFQHYhOwokyqeMYKSxGkuTNN7zAA9SwFC1jPEYow3FCrgrl-k3WxRMrAjpiAOP6-9CZTr4RcB6aRWf2Gsu6ChyyDOVse8ifzmMpW05HT16EEo_stxXXI4fYKplpmQznUWfUnz6dAfjI3hpVYzxZmYqj5xtTHSYSj7Lz-ZG-H_5nRrFu2DoFEA3FIm-CUirJQStVWfhe_RHUt6fbdg9UyWpsSD8A"/>
-<div class="absolute top-2 left-2 flex gap-1.5">
-<span class="px-2 py-0.5 bg-secondary text-on-secondary font-label-sm text-label-sm rounded-full shadow-sm font-semibold">
-            Nouveau
-          </span>
-<span class="px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm rounded-full shadow-sm flex items-center gap-1">
-<span class="material-symbols-outlined text-[12px]">download_for_offline</span>
-            Hors-ligne
-          </span>
-</div>
-<button class="bookmark-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center text-on-surface-variant shadow-sm active:scale-90 transition-transform" data-title="Fintech & Paiements Mobiles UEMOA">
-<span class="material-symbols-outlined text-[18px]">bookmark</span>
-</button>
-</div>
-<div class="flex flex-col gap-1 px-1">
-<div class="flex items-center gap-2">
-<div class="flex items-center gap-0.5 text-primary font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="font-bold">4.8</span>
-<span class="text-on-surface-variant font-normal">(85 avis)</span>
-</div>
-<span class="text-outline text-[12px]">•</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">16 heures</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 mt-0.5">
-          Fintech &amp; Paiements Mobiles UEMOA
-        </h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
-          Maîtrisez les réglementations BCEAO, l'intégration des API Wave, Orange Money et les protocoles de sécurité.
-        </p>
-<div class="flex items-center justify-between pt-space-xs mt-1">
-<div>
-<span class="font-label-sm text-label-sm text-on-surface-variant block">Accès complet</span>
-<span class="font-headline-sm text-headline-sm text-primary font-bold">20 000 FCFA</span>
-</div>
-<button class="details-btn px-space-md py-2 bg-surface-container text-primary font-label-md text-label-md rounded-xl hover:bg-primary hover:text-on-primary transition-colors active:scale-95" data-title="Fintech & Paiements Mobiles UEMOA">
-            Détails
-          </button>
-</div>
-</div>
-</div>
-</div>
-<!-- Offline Mode Feature Callout Banner -->
-<div class="px-gutter-mobile my-space-sm">
-<div class="bg-surface-container rounded-2xl p-space-md flex items-start gap-space-sm shadow-sm relative overflow-hidden">
-<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[24px]">wifi_off</span>
-</div>
-<div class="flex-1 flex flex-col gap-1">
-<div class="flex items-center justify-between">
-<h4 class="font-headline-sm text-headline-sm text-on-surface text-[1.1rem]">Pas d'Internet stable ?</h4>
-<span class="material-symbols-outlined text-[18px] text-primary">bolt</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-          Téléchargez vos cours à l'avance pour apprendre sans consommer de data où que vous soyez.
-        </p>
-<div class="pt-space-xs">
-<a id="manageDownloads" class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-semibold hover:underline cursor-pointer" href="#">
-<span>Gérer mes téléchargements</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="nav-link flex flex-col items-center justify-center gap-space-2xs min-w-[64px] h-14 transition-colors active:scale-95 text-primary-container font-semibold" data-path="accueil" href="#"><span class="material-symbols-outlined text-[22px]">cottage</span><span class="font-label-sm text-label-sm">Accueil</span></a><a class="nav-link flex flex-col items-center justify-center gap-space-2xs min-w-[64px] h-14 text-on-surface-variant transition-colors active:scale-95" data-path="catalogue" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-sm text-label-sm">Catalogue</span></a><a class="nav-link flex flex-col items-center justify-center gap-space-2xs min-w-[64px] h-14 text-on-surface-variant transition-colors active:scale-95" data-path="mes-cours" href="#"><span class="material-symbols-outlined text-[22px]">school</span><span class="font-label-sm text-label-sm">Mes Cours</span></a><a class="nav-link flex flex-col items-center justify-center gap-space-2xs min-w-[64px] h-14 text-on-surface-variant transition-colors active:scale-95" data-path="profil" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-sm text-label-sm">Profil</span></a></div></nav>
-<!-- Modal for course details -->
-<div id="courseModal" class="fixed inset-0 z-[60] flex items-center justify-center px-gutter-mobile bg-black/40 backdrop-blur-sm hidden transition-opacity duration-300 opacity-0">
-  <div class="bg-surface-container-lowest rounded-2xl p-space-md w-full max-w-sm shadow-2xl max-h-[80vh] overflow-y-auto">
-    <div class="flex items-center justify-between mb-space-sm">
-      <h3 id="modalTitle" class="font-headline-sm text-headline-sm text-on-surface">Détails du cours</h3>
-      <button id="closeModalBtn" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors active:scale-95">
-        <span class="material-symbols-outlined text-[20px]">close</span>
-      </button>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col antialiased">
+  
+  <div id="toast-container" class="fixed top-20 right-4 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe">
+    <div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm">
+      <div class="flex items-center gap-space-xs">
+        <img alt="Logo_Kratouna.jpg" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W53ZKb8p3khjER7ycf8cA3sx1nLWFeN0V0IBZfggoZM6mIkm1KNTODnT7AD83Oi30Oxog_rkJY8v7_NNhivkma4xZiLgfwDWBQft-uK0KDEpZkuupvYLTtv3lLaEqyZnKxblPHmcPwFbRw0kzu3gjjk5WC5uBRPRyarN8itx3S9sx4R5mhuDVU5D7b9xH8SLx17-lQ7-i6HQ2hV5QYWiOyTrY3XwjUCFNKQQb16bjyPmS2ToloRXShFT3w0RtN-ovPfXSUr64lgfc"/>
+        <span class="font-headline-sm text-headline-sm text-primary tracking-tight">Kratouna</span>
+        <span class="hidden">Accueil</span>
+      </div>
+      <div class="flex items-center gap-space-xs">
+        <button id="notification-btn" class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-primary transition-colors active:scale-95 relative">
+          <span class="material-symbols-outlined text-[24px]">notifications</span>
+          <span id="notif-badge" class="absolute top-2.5 right-2.5 w-2.5 h-2.5 bg-error rounded-full ring-2 ring-surface-container-lowest"></span>
+        </button>
+        <a class="w-11 h-11 flex items-center justify-center rounded-xl nav-link" data-path="profil" href="#profil">
+          <img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida/AEtjO1XXtXQbqFT2MfKObParFmFQan75n_2kiokX_FmUzsWfz8vMkqtQMuR-avcgwTviszwem5pOM6qTTjI4bJoyvaVU779DFYaEKJ2ReBo7sQHPUoPvr15wi6F2BYcEZ5ho7mz9WAYY4f-bpHz46Yxe2-FBK8HOsQMeFdKximHI9L9MP3_gM798alIT3kfHSHmh80e-JAy8liS6FncQ0fV0xoX16TO96wiuM_ovdbse55aIkd48PS7vIqu6iKWp"/>
+        </a>
+      </div>
     </div>
-    <p id="modalDescription" class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
-      Description détaillée du cours.
-    </p>
-    <div class="flex gap-space-xs">
-      <button id="modalEnrollBtn" class="flex-1 px-space-md py-2.5 bg-primary text-on-primary font-label-md text-label-md rounded-xl shadow-sm active:scale-95 transition-transform">S'inscrire</button>
-      <button id="modalCloseBtn2" class="px-space-md py-2.5 bg-surface-container text-on-surface-variant font-label-md text-label-md rounded-xl active:scale-95 transition-transform">Fermer</button>
+  </header>
+
+  <main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen">
+    
+    <section id="section-accueil" class="view-section flex flex-col w-full pb-8">
+      <div class="px-gutter-mobile pt-space-md pb-space-sm flex flex-col gap-space-2xs">
+        <div class="flex items-center justify-between">
+          <div>
+            <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight flex items-center gap-1.5">
+              Bonjour Fatou <span class="inline-block origin-bottom-right hover:rotate-12 transition-transform duration-300">👋</span>
+            </h1>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Continuez votre apprentissage aujourd'hui</p>
+          </div>
+          <div class="flex items-center gap-space-2xs px-space-xs py-1 bg-surface-container rounded-full shadow-sm cursor-pointer hover:bg-surface-container-high transition-colors" title="Série de jours actifs consécutifs !">
+            <span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+            <span class="font-label-sm text-label-sm text-primary font-bold">5 jours</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-gutter-mobile my-space-xs">
+        <div class="flex items-center gap-space-xs">
+          <div class="flex-1 flex items-center bg-surface-container-lowest rounded-xl px-space-sm h-12 shadow-sm focus-within:shadow-md transition-shadow">
+            <span class="material-symbols-outlined text-[20px] text-on-surface-variant mr-space-2xs">search</span>
+            <input id="main-search-input" class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline outline-none" placeholder="Rechercher un cours, compétence, formateur..." type="text"/>
+          </div>
+          <button id="filter-modal-btn" class="w-12 h-12 flex items-center justify-center bg-primary-container text-on-primary rounded-xl shadow-sm active:scale-95 transition-all">
+            <span class="material-symbols-outlined text-[22px]">tune</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="px-gutter-mobile my-space-sm">
+        <div class="relative overflow-hidden bg-gradient-to-br from-primary-container via-secondary to-primary rounded-2xl p-space-md text-on-primary shadow-md">
+          <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-surface-container-lowest/10 rounded-full blur-2xl pointer-events-none"></div>
+          <div class="relative z-10 flex flex-col gap-space-xs">
+            <div class="inline-flex items-center gap-space-2xs bg-surface-container-lowest/20 backdrop-blur-md px-space-xs py-1 rounded-full w-fit">
+              <span class="material-symbols-outlined text-[14px] text-on-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+              <span class="font-label-sm text-label-sm text-on-primary">50+ formations certifiantes</span>
+            </div>
+            <div>
+              <h2 class="font-headline-md text-headline-md text-on-primary tracking-tight leading-tight">
+                Apprendre. Évoluer. Réussir.
+              </h2>
+              <p class="font-body-sm text-body-sm text-on-primary/90 mt-1">
+                Formez-vous avec des experts du Sahel et boostez votre carrière tech.
+              </p>
+            </div>
+            <div class="pt-space-2xs flex items-center gap-space-sm">
+              <button onclick="switchTab('catalogue')" class="px-space-md py-2.5 bg-surface-container-lowest text-primary font-label-md text-label-md rounded-xl shadow-sm active:scale-95 transition-transform">
+                Explorer les cours
+              </button>
+              <div class="flex items-center gap-1 text-on-primary/90 font-label-sm text-label-sm">
+                <span class="material-symbols-outlined text-[16px]">cloud_download</span>
+                <span>Hors-ligne dispo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-space-xs">
+        <div id="category-container" class="flex items-center gap-space-2xs px-gutter-mobile overflow-x-auto no-scrollbar py-1">
+          <button data-category="tout" class="category-btn active px-space-sm py-2 rounded-full font-label-md text-label-md bg-primary text-on-primary shadow-sm shrink-0 transition-colors">
+            Tout
+          </button>
+          <button data-category="dev-web" class="category-btn px-space-sm py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:text-primary shadow-sm shrink-0 transition-colors">
+            Dév Web
+          </button>
+          <button data-category="mobile-money" class="category-btn px-space-sm py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:text-primary shadow-sm shrink-0 transition-colors">
+            Mobile Money
+          </button>
+          <button data-category="data" class="category-btn px-space-sm py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:text-primary shadow-sm shrink-0 transition-colors">
+            Data
+          </button>
+          <button data-category="entrepreneuriat" class="category-btn px-space-sm py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:text-primary shadow-sm shrink-0 transition-colors">
+            Entrepreneuriat
+          </button>
+          <button data-category="design-ui" class="category-btn px-space-sm py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:text-primary shadow-sm shrink-0 transition-colors">
+            Design UI
+          </button>
+        </div>
+      </div>
+
+      <div class="px-gutter-mobile my-space-sm">
+        <div class="flex items-center justify-between mb-space-2xs">
+          <h2 class="font-headline-sm text-headline-sm text-on-surface">En cours de visionnage</h2>
+          <span class="font-label-sm text-label-sm text-primary font-medium">1 actif</span>
+        </div>
+        <div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+          <div class="flex items-start gap-space-sm">
+            <div class="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+              <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNEeTqcwSREAqhuDdZegy_jXBl-bKw2vJMgnoMkQy_u8JoRYPehCJzgauST-QG-bd3EnUTEguuxP2R6ME-Wbq48CSS-8eUwXOvDGwHdQGkQpjh-W1qMGKIvM0F1U0XMleJArqKNZcfDwWA4t1Msuw40ISIfXZQGv4gkGtNAr-gh-rsxsj_Dp2yEbSEb05vxO-3DUzy0IPXQsn8n8Ta9Bp6Xq1SVDru9jzxF-wf-NJA-wGvmj8xMF75tw" alt="Close up of a modern laptop screen showing Next.js code editor with vibrant syntax highlighting and a subtle blue UI ambient glow, cinematic soft focus background."/>
+            </div>
+            <div class="flex-1 min-w-0">
+              <span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Développement Web</span>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface truncate mt-0.5">Architecture Full-Stack Sahel & Next.js</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">Module 3.1: Intégration CinetPay & Airtel/Moov</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="flex items-center justify-between font-label-sm text-label-sm">
+              <span class="text-on-surface-variant">Progression globale</span>
+              <span class="text-primary font-bold">68%</span>
+            </div>
+            <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+              <div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 68%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-space-2xs">
+            <div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+              <span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+              <span>18 min restantes</span>
+            </div>
+            <button onclick="openCoursePlayer('Architecture Full-Stack Sahel & Next.js')" class="px-space-md py-2 bg-primary text-on-primary font-label-md text-label-md rounded-xl flex items-center gap-1.5 shadow-sm active:scale-95 transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+              <span>Reprendre</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-gutter-mobile my-space-sm flex flex-col gap-space-sm">
+        <div class="flex items-center justify-between">
+          <h2 class="font-headline-sm text-headline-sm text-on-surface">Formations recommandées</h2>
+          <a class="font-label-md text-label-md text-primary font-medium hover:underline cursor-pointer" onclick="switchTab('catalogue')">Voir tout</a>
+        </div>
+        
+        <div class="bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow course-item" data-title="Développement Web Full-Stack & Supabase" data-category="dev-web">
+          <div class="relative w-full h-36 rounded-xl overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVhgl_FS3hcY9SDtA460omOFe3lM9SM79T5l6dnKXCO1_170Ovdk4Q9NsYdj6VMK1fDOCd1_eeWp5TlCmqxRGMznO1bQiB5XGkEblE825sq9HDuoYnVEnInSmfDWu0Es-uiKqkiu082porpe7o4yxH9jh12-jEe6AHnSz52zu0Kww8QaxzBO0zvV4b2UbBdWkopv7FtuRpk-fCG7EtMNjDdfeS-MZ6vjSPhmkhPfvK6y7mVSGQPKaUjA" alt="African software engineering team working on modern code architecture in a bright, minimalist tech hub with laptops and blueprints on a wooden desk, warm daylight."/>
+            <div class="absolute top-2 left-2 flex gap-1.5">
+              <span class="px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm rounded-full shadow-sm font-semibold">Certifiante</span>
+              <span class="px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm rounded-full shadow-sm flex items-center gap-1">
+                <span class="material-symbols-outlined text-[12px]">download_for_offline</span> Hors-ligne
+              </span>
+            </div>
+            <button onclick="toggleBookmark(this)" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center text-on-surface-variant shadow-sm active:scale-90 transition-transform bookmark-btn">
+              <span class="material-symbols-outlined text-[18px]">bookmark</span>
+            </button>
+          </div>
+          <div class="flex flex-col gap-1 px-1">
+            <div class="flex items-center gap-2">
+              <div class="flex items-center gap-0.5 text-primary font-label-sm text-label-sm">
+                <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="font-bold">4.9</span>
+                <span class="text-on-surface-variant font-normal">(140 avis)</span>
+              </div>
+              <span class="text-outline text-[12px]">•</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">24 heures</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 mt-0.5">Développement Web Full-Stack & Supabase</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Créez des applications performantes adaptées à la connectivité africaine avec Next.js et bases de données temps réel.</p>
+            <div class="flex items-center justify-between pt-space-xs mt-1">
+              <div>
+                <span class="font-label-sm text-label-sm text-on-surface-variant block">Prix de lancement</span>
+                <span class="font-headline-sm text-headline-sm text-primary font-bold">25 000 FCFA</span>
+              </div>
+              <button onclick="openCourseDetails('Développement Web Full-Stack & Supabase', '25 000 FCFA', '24 heures', '4.9 (140 avis)')" class="px-space-md py-2 bg-surface-container text-primary font-label-md text-label-md rounded-xl hover:bg-primary hover:text-on-primary transition-colors active:scale-95 cursor-pointer">
+                Détails
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow course-item" data-title="Fintech & Paiements Mobiles UEMOA" data-category="mobile-money">
+          <div class="relative w-full h-36 rounded-xl overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADV5-vWar_uoAn6HqSBGkqNHMDXRwyFQHYhOwokyqeMYKSxGkuTNN7zAA9SwFC1jPEYow3FCrgrl-k3WxRMrAjpiAOP6-9CZTr4RcB6aRWf2Gsu6ChyyDOVse8ifzmMpW05HT16EEo_stxXXI4fYKplpmQznUWfUnz6dAfjI3hpVYzxZmYqj5xtTHSYSj7Lz-ZG-H_5nRrFu2DoFEA3FIm-CUirJQStVWfhe_RHUt6fbdg9UyWpsSD8A" alt="Digital payment terminal and smartphone displaying mobile money transaction confirmation with clean abstract graphs, high tech financial vibe with deep blue and gold accents."/>
+            <div class="absolute top-2 left-2 flex gap-1.5">
+              <span class="px-2 py-0.5 bg-secondary text-on-secondary font-label-sm text-label-sm rounded-full shadow-sm font-semibold">Nouveau</span>
+              <span class="px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm rounded-full shadow-sm flex items-center gap-1">
+                <span class="material-symbols-outlined text-[12px]">download_for_offline</span> Hors-ligne
+              </span>
+            </div>
+            <button onclick="toggleBookmark(this)" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center text-on-surface-variant shadow-sm active:scale-90 transition-transform bookmark-btn">
+              <span class="material-symbols-outlined text-[18px]">bookmark</span>
+            </button>
+          </div>
+          <div class="flex flex-col gap-1 px-1">
+            <div class="flex items-center gap-2">
+              <div class="flex items-center gap-0.5 text-primary font-label-sm text-label-sm">
+                <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="font-bold">4.8</span>
+                <span class="text-on-surface-variant font-normal">(85 avis)</span>
+              </div>
+              <span class="text-outline text-[12px]">•</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">16 heures</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 mt-0.5">Fintech & Paiements Mobiles UEMOA</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Maîtrisez les réglementations BCEAO, l'intégration des API Wave, Orange Money et les protocoles de sécurité.</p>
+            <div class="flex items-center justify-between pt-space-xs mt-1">
+              <div>
+                <span class="font-label-sm text-label-sm text-on-surface-variant block">Accès complet</span>
+                <span class="font-headline-sm text-headline-sm text-primary font-bold">20 000 FCFA</span>
+              </div>
+              <button onclick="openCourseDetails('Fintech & Paiements Mobiles UEMOA', '20 000 FCFA', '16 heures', '4.8 (85 avis)')" class="px-space-md py-2 bg-surface-container text-primary font-label-md text-label-md rounded-xl hover:bg-primary hover:text-on-primary transition-colors active:scale-95 cursor-pointer">
+                Détails
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-gutter-mobile my-space-sm">
+        <div class="bg-surface-container rounded-2xl p-space-md flex items-start gap-space-sm shadow-sm relative overflow-hidden">
+          <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[24px]">wifi_off</span>
+          </div>
+          <div class="flex-1 flex flex-col gap-1">
+            <div class="flex items-center justify-between">
+              <h4 class="font-headline-sm text-headline-sm text-on-surface text-[1.1rem]">Pas d'Internet stable ?</h4>
+              <span class="material-symbols-outlined text-[18px] text-primary">bolt</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Téléchargez vos cours à l'avance pour apprendre sans consommer de data où que vous soyez.</p>
+            <div class="pt-space-xs">
+              <a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-semibold hover:underline cursor-pointer" onclick="openDownloadsManager()">
+                <span>Gérer mes téléchargements</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-catalogue" class="view-section hidden flex-col w-full pb-8 px-gutter-mobile">
+      <div class="pt-space-md pb-space-sm">
+        <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Catalogue des Formations</h1>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Trouvez la formation idéale pour accélérer votre carrière.</p>
+      </div>
+      <div class="my-space-xs">
+        <div class="flex items-center bg-surface-container-lowest rounded-xl px-space-sm h-12 shadow-sm">
+          <span class="material-symbols-outlined text-[20px] text-on-surface-variant mr-space-2xs">search</span>
+          <input id="catalogue-search-input" class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline outline-none" placeholder="Filtrer dans le catalogue..." type="text"/>
+        </div>
+      </div>
+      <div id="catalogue-list" class="flex flex-col gap-space-sm mt-space-sm">
+        <div class="bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm flex flex-col gap-space-sm catalogue-card" data-category="dev-web" data-title="Développement Web Full-Stack & Supabase">
+          <div class="relative w-full h-36 rounded-xl overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVhgl_FS3hcY9SDtA460omOFe3lM9SM79T5l6dnKXCO1_170Ovdk4Q9NsYdj6VMK1fDOCd1_eeWp5TlCmqxRGMznO1bQiB5XGkEblE825sq9HDuoYnVEnInSmfDWu0Es-uiKqkiu082porpe7o4yxH9jh12-jEe6AHnSz52zu0Kww8QaxzBO0zvV4b2UbBdWkopv7FtuRpk-fCG7EtMNjDdfeS-MZ6vjSPhmkhPfvK6y7mVSGQPKaUjA" alt="Dev Web"/>
+            <span class="absolute top-2 left-2 px-2 py-0.5 bg-primary text-on-primary font-label-sm text-label-sm rounded-full shadow-sm">Dév Web</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface">Développement Web Full-Stack & Supabase</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Parfait pour maîtriser les bases modernes d'applications dynamiques.</p>
+          <div class="flex justify-between items-center pt-2">
+            <span class="font-bold text-primary">25 000 FCFA</span>
+            <button onclick="openCourseDetails('Développement Web Full-Stack & Supabase', '25 000 FCFA', '24 heures', '4.9 (140 avis)')" class="px-4 py-2 bg-primary text-on-primary rounded-xl text-sm cursor-pointer">S'inscrire</button>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm flex flex-col gap-space-sm catalogue-card" data-category="mobile-money" data-title="Fintech & Paiements Mobiles UEMOA">
+          <div class="relative w-full h-36 rounded-xl overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADV5-vWar_uoAn6HqSBGkqNHMDXRwyFQHYhOwokyqeMYKSxGkuTNN7zAA9SwFC1jPEYow3FCrgrl-k3WxRMrAjpiAOP6-9CZTr4RcB6aRWf2Gsu6ChyyDOVse8ifzmMpW05HT16EEo_stxXXI4fYKplpmQznUWfUnz6dAfjI3hpVYzxZmYqj5xtTHSYSj7Lz-ZG-H_5nRrFu2DoFEA3FIm-CUirJQStVWfhe_RHUt6fbdg9UyWpsSD8A" alt="Mobile Money"/>
+            <span class="absolute top-2 left-2 px-2 py-0.5 bg-secondary text-on-secondary font-label-sm text-label-sm rounded-full shadow-sm">Mobile Money</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface">Fintech & Paiements Mobiles UEMOA</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Concevez des passerelles de paiement sécurisées et conformes.</p>
+          <div class="flex justify-between items-center pt-2">
+            <span class="font-bold text-primary">20 000 FCFA</span>
+            <button onclick="openCourseDetails('Fintech & Paiements Mobiles UEMOA', '20 000 FCFA', '16 heures', '4.8 (85 avis)')" class="px-4 py-2 bg-primary text-on-primary rounded-xl text-sm cursor-pointer">S'inscrire</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-mes-cours" class="view-section hidden flex-col w-full pb-8 px-gutter-mobile">
+      <div class="pt-space-md pb-space-sm">
+        <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Mes Cours Inscrits</h1>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Retrouvez l'ensemble de vos formations en cours et validées.</p>
+      </div>
+      <div class="flex flex-col gap-space-sm mt-space-sm">
+        <div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col gap-3">
+          <div class="flex justify-between items-start">
+            <div>
+              <span class="text-xs text-primary font-bold uppercase tracking-wider">En cours</span>
+              <h3 class="font-headline-sm text-on-surface mt-1">Architecture Full-Stack Sahel & Next.js</h3>
+            </div>
+            <span class="px-2.5 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold">68%</span>
+          </div>
+          <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+            <div class="bg-primary h-full rounded-full" style="width: 68%;"></div>
+          </div>
+          <button onclick="openCoursePlayer('Architecture Full-Stack Sahel & Next.js')" class="w-full py-2.5 bg-primary text-on-primary rounded-xl text-sm font-medium cursor-pointer">Continuer la leçon</button>
+        </div>
+
+        <div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col gap-3 border border-primary/20">
+          <div class="flex justify-between items-start">
+            <div>
+              <span class="text-xs text-emerald-600 font-bold uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined text-sm">check_circle</span> Terminé</span>
+              <h3 class="font-headline-sm text-on-surface mt-1">Introduction au Cloud computing & DevOps</h3>
+            </div>
+            <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-semibold">100%</span>
+          </div>
+          <p class="text-xs text-on-surface-variant">Certificat validé.</p>
+          <button onclick="showToast('Téléchargement du certificat officiel en cours...')" class="w-full py-2 bg-surface-container text-primary rounded-xl text-sm font-medium hover:bg-primary hover:text-on-primary transition-colors cursor-pointer flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-sm">download</span> Télécharger le certificat
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-profil" class="view-section hidden flex-col w-full pb-8 px-gutter-mobile">
+      <div class="pt-space-md pb-space-sm flex flex-col items-center">
+        <img class="w-24 h-24 rounded-full object-cover ring-4 ring-primary/20 shadow-md mb-3" src="https://lh3.googleusercontent.com/aida/AEtjO1XXtXQbqFT2MfKObParFmFQan75n_2kiokX_FmUzsWfz8vMkqtQMuR-avcgwTviszwem5pOM6qTTjI4bJoyvaVU779DFYaEKJ2ReBo7sQHPUoPvr15wi6F2BYcEZ5ho7mz9WAYY4f-bpHz46Yxe2-FBK8HOsQMeFdKximHI9L9MP3_gM798alIT3kfHSHmh80e-JAy8liS6FncQ0fV0xoX16TO96wiuM_ovdbse55aIkd48PS7vIqu6iKWp" alt="Fatou Profile"/>
+        <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Fatou Diallo</h1>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Développeuse Web • Dakar, Sénégal</p>
+      </div>
+
+      <div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col gap-4 mt-space-sm">
+        <h3 class="font-headline-sm text-on-surface border-b pb-2">Paramètres du compte</h3>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary">dark_mode</span>
+            <span class="text-sm font-medium">Mode sombre automatique</span>
+          </div>
+          <input type="checkbox" id="dark-mode-toggle" class="w-5 h-5 accent-primary cursor-pointer"/>
+        </div>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary">notifications_active</span>
+            <span class="text-sm font-medium">Notifications push cours</span>
+          </div>
+          <input type="checkbox" checked class="w-5 h-5 accent-primary cursor-pointer"/>
+        </div>
+        <button onclick="showToast('Modifications enregistrées avec succès !')" class="mt-2 w-full py-2.5 bg-primary text-on-primary rounded-xl text-sm font-semibold cursor-pointer">Sauvegarder</button>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]">
+    <div class="flex justify-around items-center h-16 px-space-xs">
+      <a data-path="accueil" class="nav-tab flex flex-col items-center justify-center gap-space-2xs min-w-[64px] h-14 transition-colors active:scale-95 text-primary font-semibold" href="#accueil">
+        <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">cottage</span>
+        <span class="font-label-sm text-label-sm">Accueil</span>
+      </a>
+      <a data-path="catalogue" class="nav-tab flex flex-col items-center justify-center gap-space-2xs min-w-[64px] h-14 text-on-surface-variant transition-colors active:scale-95" href="#catalogue">
+        <span class="material-symbols-outlined text-[22px]">menu_book</span>
+        <span class="font-label-sm text-label-sm">Catalogue</span>
+      </a>
+      <a data-path="mes-cours" class="nav-tab flex flex-col items-center justify-center gap-space-2xs min-w-[64px] h-14 text-on-surface-variant transition-colors active:scale-95" href="#mes-cours">
+        <span class="material-symbols-outlined text-[22px]">school</span>
+        <span class="font-label-sm text-label-sm">Mes Cours</span>
+      </a>
+      <a data-path="profil" class="nav-tab flex flex-col items-center justify-center gap-space-2xs min-w-[64px] h-14 text-on-surface-variant transition-colors active:scale-95" href="#profil">
+        <span class="material-symbols-outlined text-[22px]">person</span>
+        <span class="font-label-sm text-label-sm">Profil</span>
+      </a>
+    </div>
+  </nav>
+
+  <div id="course-modal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-surface-container-lowest w-full sm:max-w-lg rounded-t-3xl sm:rounded-2xl p-6 flex flex-col gap-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex justify-between items-center border-b pb-3">
+        <h3 id="modal-title" class="font-headline-sm text-on-surface text-lg font-bold">Titre du cours</h3>
+        <button onclick="closeModal('course-modal')" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+          <span class="material-symbols-outlined text-sm">close</span>
+        </button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <div class="flex items-center gap-4 text-sm text-on-surface-variant">
+          <span id="modal-duration" class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-primary">schedule</span> 24h</span>
+          <span id="modal-rating" class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span> 4.9</span>
+        </div>
+        <p class="text-sm text-on-surface-variant mt-2">Ce programme complet est optimisé pour les développeurs et professionnels souhaitant acquérir des compétences concrètes.</p>
+        <div class="bg-surface-container p-3 rounded-xl flex items-center justify-between mt-2">
+          <span class="text-sm font-medium">Tarif d'accès unique</span>
+          <span id="modal-price" class="font-headline-sm text-primary font-bold">25 000 FCFA</span>
+        </div>
+      </div>
+      <div class="flex gap-3 pt-4">
+        <button onclick="closeModal('course-modal')" class="flex-1 py-3 bg-surface-container text-on-surface font-semibold rounded-xl text-sm cursor-pointer">Annuler</button>
+        <button onclick="confirmEnrollment()" class="flex-1 py-3 bg-primary text-on-primary font-semibold rounded-xl text-sm cursor-pointer">Payer & S'inscrire</button>
+      </div>
     </div>
   </div>
-</div>
-<script>
-  (function() {
-    'use strict';
 
-    // ==================== ÉTAT GLOBAL ====================
-    const state = {
-      activeCategory: 'all',
-      searchQuery: '',
-      favorites: new Set(),
-      progress: 68,
-      timeRemaining: 18, // minutes
-      currentPath: 'accueil',
-      notifications: 3,
-      isModalOpen: false,
-    };
+  <div id="player-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex flex-col justify-between p-4 text-white">
+    <div class="flex justify-between items-center max-w-4xl mx-auto w-full pt-4">
+      <h3 id="player-title" class="text-lg font-bold truncate">Titre de la vidéo</h3>
+      <button onclick="closeModal('player-modal')" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center cursor-pointer">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="max-w-3xl mx-auto w-full aspect-video bg-surface-container rounded-2xl overflow-hidden relative flex items-center justify-center border border-white/10 shadow-2xl">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNEeTqcwSREAqhuDdZegy_jXBl-bKw2vJMgnoMkQy_u8JoRYPehCJzgauST-QG-bd3EnUTEguuxP2R6ME-Wbq48CSS-8eUwXOvDGwHdQGkQpjh-W1qMGKIvM0F1U0XMleJArqKNZcfDwWA4t1Msuw40ISIfXZQGv4gkGtNAr-gh-rsxsj_Dp2yEbSEb05vxO-3DUzy0IPXQsn8n8Ta9Bp6Xq1SVDru9jzxF-wf-NJA-wGvmj8xMF75tw" class="absolute inset-0 w-full h-full object-cover opacity-60" alt="Video cover"/>
+      <button onclick="toggleVideoPlay(this)" class="z-10 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center shadow-lg cursor-pointer">
+        <span id="play-icon-symbol" class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+      </button>
+    </div>
+    <div class="max-w-4xl mx-auto w-full pb-4 text-center text-xs text-white/60">Module interactif Kratouna Player</div>
+  </div>
 
-    // ==================== SÉLECTION DES ÉLÉMENTS ====================
-    const searchInput = document.getElementById('searchInput');
-    const filterBtn = document.getElementById('filterBtn');
-    const categoryButtons = document.querySelectorAll('.category-btn');
-    const courseCards = document.querySelectorAll('.course-card');
-    const bookmarkBtns = document.querySelectorAll('.bookmark-btn');
-    const detailsBtns = document.querySelectorAll('.details-btn');
-    const resumeBtn = document.getElementById('resumeBtn');
-    const progressBar = document.getElementById('progressBar');
-    const progressPercent = document.getElementById('progressPercent');
-    const timeRemainingEl = document.getElementById('timeRemaining');
-    const exploreBtn = document.getElementById('exploreBtn');
-    const viewAllLink = document.getElementById('viewAllLink');
-    const manageDownloads = document.getElementById('manageDownloads');
-    const notificationBtn = document.getElementById('notificationBtn');
-    const notifBadge = document.getElementById('notifBadge');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const resumeCourseCard = document.getElementById('resumeCourseCard');
-    
-    // Modal elements
-    const courseModal = document.getElementById('courseModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDescription = document.getElementById('modalDescription');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    const modalCloseBtn2 = document.getElementById('modalCloseBtn2');
-    const modalEnrollBtn = document.getElementById('modalEnrollBtn');
-
-    // ==================== FONCTIONS UTILITAIRES ====================
-    function showToast(message, type = 'info') {
-      // Créer un élément toast simple
+  <script>
+    function showToast(message) {
+      const container = document.getElementById('toast-container');
       const toast = document.createElement('div');
-      toast.className = 'fixed bottom-24 left-1/2 transform -translate-x-1/2 z-[80] px-space-md py-space-xs rounded-xl shadow-lg font-label-md text-label-md bg-surface-container-lowest text-on-surface border border-outline-variant flex items-center gap-space-2xs animate-pulse';
-      toast.style.backgroundColor = '#fff';
-      toast.innerHTML = `
-        <span class="material-symbols-outlined text-[18px] ${type === 'success' ? 'text-primary' : type === 'error' ? 'text-error' : 'text-on-surface-variant'}">
-          ${type === 'success' ? 'check_circle' : type === 'error' ? 'error' : 'info'}
-        </span>
-        <span>${message}</span>
-      `;
-      document.body.appendChild(toast);
+      toast.className = 'bg-surface-container-lowest border border-primary/20 text-on-surface shadow-xl rounded-xl px-4 py-3 text-sm flex items-center gap-3 toast-notification translate-y-2 opacity-0';
+      toast.innerHTML = `<span class="material-symbols-outlined text-primary text-xl">info</span><span>${message}</span>`;
+      container.appendChild(toast);
+      setTimeout(() => toast.classList.remove('translate-y-2', 'opacity-0'), 10);
       setTimeout(() => {
-        toast.classList.add('opacity-0', 'transition-opacity', 'duration-500');
-        setTimeout(() => toast.remove(), 500);
-      }, 2000);
+        toast.classList.add('translate-y-2', 'opacity-0');
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
     }
 
-    function updateNotifBadge() {
-      if (state.notifications > 0) {
-        notifBadge.textContent = state.notifications;
-        notifBadge.classList.remove('hidden');
-      } else {
-        notifBadge.classList.add('hidden');
+    const navTabs = document.querySelectorAll('.nav-tab');
+    const sections = document.querySelectorAll('.view-section');
+
+    function switchTab(path) {
+      sections.forEach(sec => sec.classList.add('hidden'));
+      const targetSec = document.getElementById(`section-${path}`);
+      if (targetSec) {
+        targetSec.classList.remove('hidden');
+        targetSec.classList.add('flex');
       }
-    }
 
-    // ==================== GESTION DE LA NAVIGATION ====================
-    function setActiveNav(path) {
-      state.currentPath = path;
-      navLinks.forEach(link => {
-        const linkPath = link.getAttribute('data-path');
-        if (linkPath === path) {
-          link.classList.add('text-primary-container', 'font-semibold');
-          link.classList.remove('text-on-surface-variant');
-          link.setAttribute('aria-current', 'page');
+      navTabs.forEach(tab => {
+        const iconSpan = tab.querySelector('span.material-symbols-outlined');
+        if (tab.getAttribute('data-path') === path) {
+          tab.classList.add('text-primary', 'font-semibold');
+          tab.classList.remove('text-on-surface-variant');
+          if(iconSpan) iconSpan.style.fontVariationSettings = "'FILL' 1";
         } else {
-          link.classList.remove('text-primary-container', 'font-semibold');
-          link.classList.add('text-on-surface-variant');
-          link.removeAttribute('aria-current');
+          tab.classList.remove('text-primary', 'font-semibold');
+          tab.classList.add('text-on-surface-variant');
+          if(iconSpan) iconSpan.style.fontVariationSettings = "'FILL' 0";
         }
       });
-      // Simuler un changement de contenu ou juste toast
-      if (path !== 'accueil') {
-        showToast(`Navigation vers ${path} (simulation)`, 'info');
-      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
+    navTabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
         e.preventDefault();
-        const path = link.getAttribute('data-path');
-        setActiveNav(path);
+        switchTab(tab.getAttribute('data-path'));
       });
     });
 
-    // ==================== GESTION DE LA RECHERCHE ====================
-    searchInput.addEventListener('input', (e) => {
-      state.searchQuery = e.target.value.toLowerCase().trim();
-      filterCourses();
-    });
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const courseItems = document.querySelectorAll('.course-item');
 
-    function filterCourses() {
-      const query = state.searchQuery;
-      const category = state.activeCategory;
-      
-      courseCards.forEach(card => {
-        const title = card.querySelector('h3')?.textContent?.toLowerCase() || '';
-        const desc = card.querySelector('p')?.textContent?.toLowerCase() || '';
-        const cardCategory = card.getAttribute('data-category') || 'all';
-        
-        const matchesSearch = title.includes(query) || desc.includes(query);
-        const matchesCategory = category === 'all' || cardCategory === category;
-        
-        if (matchesSearch && matchesCategory) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    // ==================== GESTION DES CATÉGORIES ====================
-    categoryButtons.forEach(btn => {
+    categoryBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Mise à jour visuelle des boutons
-        categoryButtons.forEach(b => {
+        categoryBtns.forEach(b => {
           b.classList.remove('bg-primary', 'text-on-primary');
           b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
         });
         btn.classList.add('bg-primary', 'text-on-primary');
         btn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
-        
-        state.activeCategory = btn.getAttribute('data-category');
-        filterCourses();
-        showToast(`Filtre: ${btn.textContent.trim()}`, 'info');
+
+        const selectedCat = btn.getAttribute('data-category');
+        courseItems.forEach(item => {
+          if (selectedCat === 'tout' || item.getAttribute('data-category') === selectedCat) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
       });
     });
 
-    // ==================== GESTION DES FAVORIS (BOOKMARK) ====================
-    bookmarkBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const title = btn.getAttribute('data-title');
-        const icon = btn.querySelector('.material-symbols-outlined');
-        
-        if (state.favorites.has(title)) {
-          state.favorites.delete(title);
-          icon.textContent = 'bookmark';
-          icon.style.color = '';
-          showToast(`"${title}" retiré des favoris`, 'info');
-        } else {
-          state.favorites.add(title);
-          icon.textContent = 'bookmark_added';
-          icon.style.color = '#004ac6';
-          showToast(`"${title}" ajouté aux favoris`, 'success');
-        }
+    const searchInput = document.getElementById('main-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        courseItems.forEach(item => {
+          const title = item.getAttribute('data-title').toLowerCase();
+          item.style.display = title.includes(query) ? 'flex' : 'none';
+        });
       });
-    });
-
-    // ==================== GESTION DES BOUTONS DÉTAILS ET MODALE ====================
-    function openModal(title, description) {
-      modalTitle.textContent = title;
-      modalDescription.textContent = description;
-      courseModal.classList.remove('hidden');
-      // Petite animation d'opacité
-      setTimeout(() => {
-        courseModal.classList.remove('opacity-0');
-      }, 10);
-      state.isModalOpen = true;
     }
 
-    function closeModal() {
-      courseModal.classList.add('opacity-0');
-      setTimeout(() => {
-        courseModal.classList.add('hidden');
-        state.isModalOpen = false;
-      }, 300);
+    function openCourseDetails(title, price, duration, rating) {
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-price').innerText = price;
+      document.getElementById('modal-duration').innerHTML = `<span class="material-symbols-outlined text-sm text-primary">schedule</span> ${duration}`;
+      document.getElementById('modal-rating').innerHTML = `<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span> ${rating}`;
+      document.getElementById('course-modal').classList.remove('hidden');
     }
 
-    detailsBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const title = btn.getAttribute('data-title');
-        let description = '';
-        if (title.includes('Full-Stack')) {
-          description = 'Ce cours complet vous apprendra à créer des applications web modernes avec Next.js, Supabase, et les meilleures pratiques adaptées au contexte sahélien. Vous réaliserez un projet pratique de bout en bout.';
-        } else if (title.includes('Fintech')) {
-          description = 'Découvrez les fondamentaux des paiements mobiles en zone UEMOA, les réglementations BCEAO, et apprenez à intégrer les API de Wave, Orange Money, et à sécuriser les transactions.';
-        } else {
-          description = 'Description détaillée du cours.';
-        }
-        openModal(title, description);
-      });
-    });
+    function openCoursePlayer(title) {
+      document.getElementById('player-title').innerText = title;
+      document.getElementById('player-modal').classList.remove('hidden');
+    }
 
-    closeModalBtn.addEventListener('click', closeModal);
-    modalCloseBtn2.addEventListener('click', closeModal);
-    modalEnrollBtn.addEventListener('click', () => {
-      closeModal();
-      showToast('Inscription réussie !', 'success');
-    });
+    function openDownloadsManager() {
+      showToast('Gestionnaire hors-ligne : 2 cours déjà synchronisés.');
+    }
 
-    // Fermer la modale en cliquant à l'extérieur
-    courseModal.addEventListener('click', (e) => {
-      if (e.target === courseModal) {
-        closeModal();
-      }
-    });
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add('hidden');
+    }
 
-    // ==================== GESTION DU BOUTON REPRENDRE ====================
-    resumeBtn.addEventListener('click', () => {
-      // Simuler une progression
-      if (state.progress < 100) {
-        state.progress = Math.min(100, state.progress + 2);
-        progressBar.style.width = state.progress + '%';
-        progressPercent.textContent = state.progress + '%';
-        
-        if (state.timeRemaining > 0) {
-          state.timeRemaining = Math.max(0, state.timeRemaining - 1);
-          timeRemainingEl.textContent = state.timeRemaining + ' min restantes';
-        }
-        
-        showToast('Reprise du cours en cours...', 'info');
+    function confirmEnrollment() {
+      closeModal('course-modal');
+      showToast('Inscription confirmée ! Retrouvez le cours dans "Mes Cours".');
+    }
+
+    function toggleBookmark(btn) {
+      const icon = btn.querySelector('span');
+      if (icon.style.fontVariationSettings === "'FILL' 1") {
+        icon.style.fontVariationSettings = "'FILL' 0";
+        showToast('Cours retiré des favoris.');
       } else {
-        showToast('Cours terminé ! 🎉', 'success');
+        icon.style.fontVariationSettings = "'FILL' 1";
+        showToast('Cours sauvegardé dans vos favoris !');
       }
-    });
+    }
 
-    // ==================== BOUTON EXPLORER ====================
-    exploreBtn.addEventListener('click', () => {
-      showToast('Exploration des cours...', 'info');
-      // Faire défiler vers la section recommandée
-      document.querySelector('.px-gutter-mobile.my-space-sm.flex.flex-col.gap-space-sm')?.scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // ==================== LIEN VOIR TOUT ====================
-    viewAllLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      showToast('Affichage de tous les cours...', 'info');
-    });
-
-    // ==================== GESTION DES TÉLÉCHARGEMENTS ====================
-    manageDownloads.addEventListener('click', (e) => {
-      e.preventDefault();
-      showToast('Gestion des téléchargements hors-ligne', 'info');
-    });
-
-    // ==================== NOTIFICATIONS ====================
-    notificationBtn.addEventListener('click', () => {
-      if (state.notifications > 0) {
-        state.notifications = 0;
-        updateNotifBadge();
-        showToast('Toutes les notifications ont été lues', 'success');
+    function toggleVideoPlay(btn) {
+      const icon = btn.querySelector('span');
+      if (icon.innerText === 'play_arrow') {
+        icon.innerText = 'pause';
+        showToast('Lecture en cours...');
       } else {
-        showToast('Aucune nouvelle notification', 'info');
+        icon.innerText = 'play_arrow';
+        showToast('Lecture mise en pause.');
       }
-    });
-
-    // ==================== INITIALISATION ====================
-    function init() {
-      updateNotifBadge();
-      // S'assurer que l'état initial de la navigation est correct
-      setActiveNav('accueil');
     }
 
-    // Exécuter l'initialisation au chargement
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-      init();
-    }
-
-    // ==================== GESTION DES TOUCHES CLAVIER ====================
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && state.isModalOpen) {
-        closeModal();
-      }
+    document.getElementById('notification-btn').addEventListener('click', () => {
+      showToast('Aucune nouvelle notification.');
+      document.getElementById('notif-badge').style.display = 'none';
     });
 
-  })();
-</script></body></html>
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    if (darkModeToggle) {
+      darkModeToggle.addEventListener('change', (e) => {
+        if(e.target.checked) {
+          showToast('Mode sombre activé.');
+          document.documentElement.classList.add('dark');
+        } else {
+          showToast('Mode clair activé.');
+          document.documentElement.classList.remove('dark');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+
